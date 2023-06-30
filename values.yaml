@@ -1,0 +1,11 @@
+replicaCount: 2
+image:
+  repository: manishaverma/helm
+  tag: latest
+  pullPolicy: Always
+service:
+  type: LoadBalancer
+  port: 9091
+  targetPort: 80
+serviceAccount:
+  create: true

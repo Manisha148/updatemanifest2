@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+   name: {{ include "webapp.fullname" . }}
+   labels:
+      app: webapp
+spec:
+   ports:
+      - port: 9095
+        targetPort: 80
+   selector:
+      app: webapp
+   type: LoadBalancer
